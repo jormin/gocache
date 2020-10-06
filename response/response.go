@@ -1,4 +1,4 @@
-package http
+package response
 
 // 响应结构体
 type Response struct {

@@ -1,9 +1,12 @@
 package main
 
 import (
+	"encoding/json"
 	"flag"
 	"fmt"
 	"go-cache/cache-benchmark/cacheClient"
+	"go-cache/response"
+	"log"
 	"math/rand"
 	"strings"
 	"time"
@@ -61,9 +64,12 @@ func run(client cacheClient.Client, c *cacheClient.Cmd, r *result) {
 	d := time.Now().Sub(start)
 	resultType := c.Name
 	if resultType == "get" {
-		if c.Value == "" {
+		var v response.Response
+		_ = json.Unmarshal([]byte(c.Value), &v)
+		if v.Data == nil {
 			resultType = "miss"
-		} else if c.Value != expect {
+		} else if v.Data != expect {
+			log.Println(expect, c.Value)
 			panic(c)
 		}
 	}
@@ -138,7 +144,7 @@ var total, valueSize, threads, keyspacelen, pipelen int
 
 func init() {
 	flag.StringVar(&typ, "type", "redis", "cache server type")
-	flag.StringVar(&server, "h", "localhost", "cache server address")
+	flag.StringVar(&server, "h", "127.0.0.1", "cache server address")
 	flag.IntVar(&total, "n", 1000, "total number of requests")
 	flag.IntVar(&valueSize, "d", 1000, "data size of SET/GET value in bytes")
 	flag.IntVar(&threads, "c", 1, "number of parallel connections")

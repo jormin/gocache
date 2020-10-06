@@ -3,6 +3,7 @@ package http
 import (
 	"encoding/json"
 	"go-cache/helper"
+	"go-cache/response"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -39,7 +40,7 @@ func (h *cacheHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 			w.WriteHeader(http.StatusNotFound)
 		}
 		// 正常读取则响应缓存内容
-		b, _ = json.Marshal(Response{
+		b, _ = json.Marshal(response.Response{
 			Code:    0,
 			Message: "get cache success",
 			Data:    string(b),
@@ -59,7 +60,7 @@ func (h *cacheHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 				return
 			}
 		}
-		b, _ = json.Marshal(Response{
+		b, _ = json.Marshal(response.Response{
 			Code:    0,
 			Message: "put cache success",
 		})
@@ -73,7 +74,7 @@ func (h *cacheHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 			w.WriteHeader(http.StatusInternalServerError)
 			return
 		}
-		b, _ := json.Marshal(Response{
+		b, _ := json.Marshal(response.Response{
 			Code:    0,
 			Message: "delete cache success",
 		})
