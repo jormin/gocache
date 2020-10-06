@@ -7,7 +7,7 @@ func New(typ string) Cache {
 	var c Cache
 	switch typ {
 	case "inmemory":
-		c = new(inMemoryCache)
+		c = newInMemoryCache()
 	default:
 		panic("unknown cache type " + typ)
 	}

@@ -61,3 +61,12 @@ func (i *inMemoryCache) Delete(k string) error {
 func (i *inMemoryCache) GetStat() Stat {
 	return i.Stat
 }
+
+// 生成内存缓存
+func newInMemoryCache() *inMemoryCache {
+	return &inMemoryCache{
+		make(map[string][]byte),
+		sync.RWMutex{},
+		Stat{},
+	}
+}
