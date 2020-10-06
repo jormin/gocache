@@ -69,7 +69,9 @@ func run(client cacheClient.Client, c *cacheClient.Cmd, r *result) {
 		if v.Data == nil {
 			resultType = "miss"
 		} else if v.Data != expect {
-			log.Println(expect, c.Value)
+			log.Println(c)
+			log.Println(v)
+			log.Printf("%s - %s\n", v.Data, expect)
 			panic(c)
 		}
 	}

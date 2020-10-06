@@ -2,8 +2,8 @@ package main
 
 import (
 	"flag"
-	"fmt"
 	"go-cache/cache-benchmark/cacheClient"
+	"log"
 )
 
 func main() {
@@ -21,8 +21,8 @@ func main() {
 	}
 	client.Run(cmd)
 	if cmd.Error != nil {
-		fmt.Println("error:", cmd.Error)
+		log.Println("error:", cmd.Error)
 	} else {
-		fmt.Println(cmd.Value)
+		log.Println(cmd.Value)
 	}
 }
