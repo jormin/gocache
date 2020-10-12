@@ -6,4 +6,4 @@ cache-benchmark/cache-benchmark
 chapter1/server/server
 chapter2/server/server
 client/client
-rocksdb/
+rocksdb/*
