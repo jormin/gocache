@@ -3,7 +3,7 @@ package tcp
 import (
 	"encoding/json"
 	"fmt"
-	"go-cache/response"
+	"github.com/jormin/go-cache/response"
 	"net"
 )
 

@@ -2,8 +2,8 @@ package http
 
 import (
 	"encoding/json"
-	"go-cache/helper"
-	"go-cache/response"
+	"github.com/jormin/go-cache/helper"
+	"github.com/jormin/go-cache/response"
 	"io/ioutil"
 	"log"
 	"net/http"

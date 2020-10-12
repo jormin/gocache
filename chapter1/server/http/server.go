@@ -1,8 +1,8 @@
 package http
 
 import (
-	"go-cache/chapter1/server/cache"
-	"go-cache/helper"
+	"github.com/jormin/go-cache/chapter1/server/cache"
+	"github.com/jormin/go-cache/helper"
 	"net/http"
 )
 

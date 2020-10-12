@@ -1,4 +1,4 @@
-module go-cache
+module github.com/jormin/go-cache
 
 go 1.15
 

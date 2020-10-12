@@ -2,3 +2,8 @@
 .idea/
 git-ci
 server/id.txt
+cache-benchmark/cache-benchmark
+chapter1/server/server
+chapter2/server/server
+client/client
+rocksdb/

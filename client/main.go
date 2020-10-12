@@ -2,7 +2,7 @@ package main
 
 import (
 	"flag"
-	"go-cache/cache-benchmark/cacheClient"
+	"github.com/jormin/go-cache/cache-benchmark/cacheClient"
 	"log"
 )
 

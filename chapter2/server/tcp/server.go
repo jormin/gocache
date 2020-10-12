@@ -2,8 +2,8 @@ package tcp
 
 import (
 	"bufio"
-	"go-cache/chapter1/server/cache"
-	"go-cache/helper"
+	"github.com/jormin/go-cache/chapter1/server/cache"
+	"github.com/jormin/go-cache/helper"
 	"io"
 	"log"
 	"net"

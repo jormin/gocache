@@ -1,9 +1,9 @@
 package main
 
 import (
-	"go-cache/chapter1/server/cache"
-	"go-cache/chapter2/server/http"
-	"go-cache/chapter2/server/tcp"
+	"github.com/jormin/go-cache/chapter1/server/cache"
+	"github.com/jormin/go-cache/chapter2/server/http"
+	"github.com/jormin/go-cache/chapter2/server/tcp"
 )
 
 func main() {

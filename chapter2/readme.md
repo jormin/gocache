@@ -5,7 +5,7 @@
 1. 编译运行
 
     ```shell
-    ➜  go-cache git:(master) cd chapter2/server 
+    ➜  github.com/jormin/go-cache git:(master) cd chapter2/server 
     ➜  server git:(master) ✗ go build
     ➜  server git:(master) ✗ ./server 
     2020/10/07 00:04:25 inmemory ready to serve
@@ -15,7 +15,7 @@
 2. 请求测试
 
     ```shell
-    ➜  go-cache git:(master) cd chapter2/test
+    ➜  github.com/jormin/go-cache git:(master) cd chapter2/test
     ➜  test git:(master) ✗ ./test.sh 
     [cp client to /usr/bin/]
     Password:
@@ -50,10 +50,10 @@
 
     ```shell
     # 编译
-    ➜  go-cache git:(master) cd cache-benchmark
+    ➜  github.com/jormin/go-cache git:(master) cd cache-benchmark
     ➜  server git:(master) ✗ go build
     # 运行测试脚本
-    ➜  go-cache git:(master) cd chapter2/test
+    ➜  github.com/jormin/go-cache git:(master) cd chapter2/test
     ➜  test git:(master) ✗ ./benchmark.sh
     [cp cache-benchmark to /usr/bin/]
     [cache-set] [cache-benchmark -type tcp -h 127.0.0.1:9091 -n 10000 -r 10000 -t set]

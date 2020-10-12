@@ -5,18 +5,18 @@
 1. 编译运行
 
     ```shell
-    ➜  go-cache git:(master) cd chapter1/server 
+    ➜  github.com/jormin/go-cache git:(master) cd chapter1/server 
     ➜  server git:(master) ✗ go build
     ➜  server git:(master) ✗ ./server 
     2020/10/06 17:51:17 inmemory ready to serve
-    2020/10/06 17:51:36 http: superfluous response.WriteHeader call from go-cache/chapter1/server/http.(*cacheHandler).ServeHTTP (cache.go:67)
+    2020/10/06 17:51:36 http: superfluous response.WriteHeader call from github.com/jormin/go-cache/chapter1/server/http.(*cacheHandler).ServeHTTP (cache.go:67)
     ...
     ```
 
 2. 请求测试
 
     ```shell
-    ➜  go-cache git:(master) cd chapter1/test
+    ➜  github.com/jormin/go-cache git:(master) cd chapter1/test
     ➜  test git:(master) ✗ ./test.sh 
     [get stat] [curl 127.0.0.1:9090/status/]
     {"Count":0,"KeySize":0,"ValueSize":0}
@@ -65,10 +65,10 @@
 
     ```shell
     # 编译
-    ➜  go-cache git:(master) cd cache-benchmark
+    ➜  github.com/jormin/go-cache git:(master) cd cache-benchmark
     ➜  server git:(master) ✗ go build
     # 运行测试脚本
-    ➜  go-cache git:(master) cd chapter1/test
+    ➜  github.com/jormin/go-cache git:(master) cd chapter1/test
     ➜  test git:(master) ✗ ./benchmark.sh 
     [cp cache-benchmark to /usr/bin/]
     [cache-set] [cache-benchmark -type http -h 127.0.0.1:9090 -n 10000 -r 10000 -t set]
